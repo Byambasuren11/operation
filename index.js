@@ -78,7 +78,7 @@ console.log("inch to cm=" + 40 / 0.4);
 console.log(
   "Гараас дугуйн радиус буюу r орж ирэхэд тухайн дугуйн эзэлхүүнийг ол. Гараас дугуйн радиус буюу r, орж ирэхэд тухайн дугуйн хүрээний уртыг ол."
 );
-let radius = prompt("Please enter radius", 0);
+let radius = prompt("Please enter radius","");
 console.log("Дугуйн эзэлхүүн=" + radius * radius * radius);
 // 18. 3 оронтоо тооны хамгийн эхний цифрийг олох илэрхийлэл бич
 console.log("3 оронтоо тооны хамгийн эхний цифрийг олох илэрхийлэл бич");
@@ -100,13 +100,20 @@ const price2 = 27500;
 const price3 = 100000;
 const taxRate1 = 0.15;
 const taxRate2 = 0.2;
-//if (
-// (price1 <= 5000 && price1 >= 30000) ||
-// (price2 <= 5000 && price2 >= 30000) ||
-//(price3 <= 5000 && price3 >= 30000))
-console.log("ehnii hool=" + (price1 * taxRate2 + price1));
-console.log("daraagiin hool=" + (price2 * taxRate1 + price2));
-console.log("suuliin hool=" + (price3 * taxRate2 + price3));
+if (
+(price1 <= 5000 && price1 >= 30000) ||
+ (price2 <= 5000 && price2 >= 30000) ||
+(price3 <= 5000 && price3 >= 30000))
+{
+    console.log("ehnii hool 20% tax=" + (price1 * taxRate2 + price1));
+    console.log("daraagiin hool 20% tax=" + (price2 * taxRate2 + price2));
+    console.log("suuliin hool 20% tax=" + (price3 * taxRate2 + price3));
+}
+else{
+    console.log("ehnii hool 15% tax=" + (price1 * taxRate1 + price1));
+    console.log("daraagiin hool 15% tax=" + (price2 * taxRate1 + price2));
+    console.log("suuliin hool 15% tax=" + (price3 * taxRate1 + price3));
+}
 //21. Багш сурагчдын эцсийн шалгалтын дүнг дүгнэхээр болжээ
 //1. Бат - 67 оноо, Онц Дүмд - 59 оноо авчээ.
 //2. Шалгалтын онооноос хамааран багш тодорхой дүнгийн жагсаалт гаргах ёстой бөгөөд энэ нь
@@ -119,17 +126,22 @@ console.log("suuliin hool=" + (price3 * taxRate2 + price3));
 const Bat=67;
 const Onts=59;
 if(Bat<60 || Onts<60)
-    console.log(Bat+ "Mash muu");
-    console.log( Onts+"Mash muu");
+{
+    console.log("Mash muu");
+}
 else if(Bat>=60 && Bat<70)
-    console.log(Bat+ "Hanganalttай");
-    console.log( Onts+"Hanganalttай");
+{
+    console.log("Hanganalttай");
+}
 else if(Bat>=70 && Bat<80)
-    console.log(Bat+ "Dund");
-    console.log(Onts+"Dund");
+{
+    console.log( "Dund");
+}
 else if(Bat>=80 && Bat<90)
-    console.log(Bat+ "Sain");
-    console.log(Onts+"Sain");
+{
+    console.log("Sain");
+}
 else
-    console.log(Bat+ "Mash sain"); 
-    console.log(Onts+"Mash sain");
+{
+    console.log("Mash sain"); 
+}
